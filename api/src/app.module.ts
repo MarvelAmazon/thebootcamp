@@ -4,7 +4,7 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import {TypeOrmModule} from '@nestjs/typeorm'
 import { ConfigModule } from '@nestjs/config';
-import { BootcampModule } from './bootcamp/bootcamp.module';
+
 @Module({
   imports: [UserModule,
     ConfigModule.forRoot({isGlobal:true}),
@@ -14,7 +14,7 @@ import { BootcampModule } from './bootcamp/bootcamp.module';
     autoLoadEntities:true,
     synchronize:true
   }),
-    BootcampModule],
+    ],
   controllers: [AppController],
   providers: [AppService],
 })
